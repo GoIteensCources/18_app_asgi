@@ -2,7 +2,7 @@
 
 def uvicorn_run():
     import uvicorn
-    uvicorn.run("main:app", reload=True)
+    uvicorn.run("main:app", reload=True, ssl_keyfile="key.pem", ssl_certfile="cert.pem")
 
 
 def hypercorn_run(app):
